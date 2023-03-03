@@ -50,7 +50,7 @@ public class NadadorController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String processUpdateSubmit(@ModelAttribute("nadador") Nadador nadador, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
-            return "nadadors/update";
+            return "nadador/update";
         nadadorDao.updateNadador(nadador);
         return "redirect:list";
     }
