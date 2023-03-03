@@ -34,8 +34,8 @@ public class NadadorDao {
     /* Actualitza els atributs del nadador
        (excepte el nom, que és la clau primària) */
     public void updateNadador(Nadador nadador) {
-        jdbcTemplate.update("UPDATE Nadador SET num_federat =?, pais =?, edat =?, genere =?",
-                nadador.getNumFederat(), nadador.getPais(), nadador.getEdat(), nadador.getGenere());
+        jdbcTemplate.update("UPDATE Nadador SET num_federat =?, pais =?, edat =?, genere =? WHERE nom=?",
+                nadador.getNumFederat(), nadador.getPais(), nadador.getEdat(), nadador.getGenere(), nadador.getNom());
     }
 
     public Nadador getNadador(String nomNadador) {
