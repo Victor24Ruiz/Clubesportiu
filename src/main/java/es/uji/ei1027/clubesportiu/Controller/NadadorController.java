@@ -55,5 +55,9 @@ public class NadadorController {
         return "redirect:list";
     }
 
-
+    @RequestMapping(value = "/delete/{nom}")
+    public String processDelete(@PathVariable String nom) {
+        nadadorDao.deleteNadador(nom);
+        return "redirect:../list";
+    }
 }
