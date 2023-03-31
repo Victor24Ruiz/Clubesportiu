@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
 </head>
 <body>
-<h2>Nou nadador</h2>
+<h2>Modifica nadador</h2>
 <form action='#' th:action="@{/nadador/update}" th:object="${nadador}" method="post">
   <table>
     <tr>
@@ -24,6 +24,7 @@
     <tr>
       <td><label>Edat</label></td>
       <td><input type="number" min="0" th:field="*{edat}" /></td>
+      <td th:if="${#fields.hasErrors('edat')}" th:errors="*{edat}"></td>
     </tr>
     <tr>
       <td><label>Genere</label></td>

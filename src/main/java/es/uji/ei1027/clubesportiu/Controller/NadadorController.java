@@ -56,6 +56,8 @@ public class NadadorController {
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String processUpdateSubmit(@ModelAttribute("nadador") Nadador nadador, BindingResult bindingResult) {
+        NadadorValidator nadadorValidator = new NadadorValidator();
+        nadadorValidator.validate(nadador, bindingResult);
         if (bindingResult.hasErrors())
             return "nadador/update";
         nadadorDao.updateNadador(nadador);
