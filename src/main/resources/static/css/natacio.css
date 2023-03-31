@@ -1,0 +1,19 @@
+body {
+   font-family: Helvetica, Arial, sans-serif;
+   background-color: white;
+}
+
+h1 {
+   font-size: x-large;
+   color: orange;
+}
+
+h2 {
+   font-size: large;
+   color: blue;
+}
+
+.error {
+     color: red;
+     font-size:80%
+}
