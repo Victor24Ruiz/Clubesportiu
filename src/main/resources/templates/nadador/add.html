@@ -12,10 +12,11 @@
       <tr>
         <td><label>Nom</label></td>
         <td><input type="text" th:field="*{nom}" /></td>
+        <td th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></td>
       </tr>
       <tr>
         <td><label>Num. Federat</label></td>
-        <td><input type="text" th:field="*{numFederat}"></td>
+        <td><input type="text" th:field="*{numFederat}" /></td>
       </tr>
       <tr>
         <td><label>Pais</label></td>
@@ -23,10 +24,11 @@
       </tr>
       <tr>
         <td><label>Edat</label></td>
-        <td><input type="number" min="0" th:field="*{edat}" /></td>
+        <td><input type="number" th:field="*{edat}" /></td>
+        <td th:if="${#fields.hasErrors('edat')}" th:errors="*{edat}"></td> ②
       </tr>
       <tr>
-        <td><label>Genere</label></td>
+        <td><label>Gènere</label></td>
         <td><input type="text" th:field="*{genere}" /></td>
       </tr>
       <tr>
