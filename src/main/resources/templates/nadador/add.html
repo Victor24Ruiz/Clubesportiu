@@ -26,7 +26,7 @@
       </tr>
       <tr>
         <td><label>Edat</label></td>
-        <td><input type="number" th:field="*{edat}" /></td>
+        <td><input type="number" th:field="*{edat}" th:errorclass="needcorrection" /></td>
         <td th:if="${#fields.hasErrors('edat')}" th:errors="*{edat}" class="error" />
       </tr>
       <tr>
