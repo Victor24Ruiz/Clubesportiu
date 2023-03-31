@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Controller
 @RequestMapping("/nadador")
 public class NadadorController {
@@ -46,6 +49,8 @@ public class NadadorController {
     @RequestMapping(value = "/update/{nom}", method = RequestMethod.GET)
     public String editNadador(Model model, @PathVariable String nom) {
         model.addAttribute("nadador", nadadorDao.getNadador(nom));
+        List<String> genderList = Arrays.asList("Femeni", "Masculi");
+        model.addAttribute("genderList", genderList);
         return "nadador/update";
     }
 
