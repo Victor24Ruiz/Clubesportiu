@@ -12,8 +12,7 @@
 
 <body>
 <h1>Llista d'usuaris del sistema</h1>
-<div th:if="${#lists.isEmpty(users)}">
-  No hi ha usuaris
+<div th:replace="fragments/logininfo">
 </div>
 <table th:unless="${#lists.isEmpty(users)}"  class="table table-condensed">
   <thead>
