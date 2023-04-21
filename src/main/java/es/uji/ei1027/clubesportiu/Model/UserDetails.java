@@ -8,7 +8,7 @@ public class UserDetails {
         return username;
     }
 
-    public void setUsername() {
+    public void setUsername(String alice) {
         this.username = username;
     }
 
@@ -16,7 +16,7 @@ public class UserDetails {
         return password;
     }
 
-    public void setPassword() {
+    public void setPassword(String password) {
         this.password = password;
     }
 }
