@@ -8,7 +8,7 @@ public class UserDetails {
         return username;
     }
 
-    public void setUsername(String alice) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
