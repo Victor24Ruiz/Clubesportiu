@@ -2,11 +2,13 @@ package es.uji.ei1027.clubesportiu.Dao;
 
 import es.uji.ei1027.clubesportiu.Model.UserDetails;
 import org.jasypt.util.password.BasicPasswordEncryptor;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class FakeUserProvider implements UserDao {
     final Map<String, UserDetails> knownUsers = new HashMap<String, UserDetails>();
 

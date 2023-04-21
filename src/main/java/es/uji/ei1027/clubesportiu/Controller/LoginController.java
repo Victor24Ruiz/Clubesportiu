@@ -22,7 +22,11 @@ class UserValidator implements Validator {
 
     @Override
     public void validate(Object obj, Errors errors) {
-
+        UserDetails userDetails = (UserDetails) obj;
+        if (userDetails.getUsername().trim().equals(""))
+            errors.rejectValue("username", "obligatori", "Cal introduir un usuari");
+        if (userDetails.getPassword().trim().equals(""))
+            errors.rejectValue("password", "obligatori", "Cal introduir una contrasenya");
     }
 }
 
